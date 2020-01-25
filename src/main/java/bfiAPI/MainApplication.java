@@ -18,26 +18,8 @@ import java.util.concurrent.TimeUnit;
 @SpringBootApplication
 public class MainApplication {
 
-    public static Logger logger = LoggerFactory.getLogger(MainApplication.class);
-
     public static void main(String... args){
         SpringApplication.run(MainApplication.class, args);
     }
 
-    private final CountDownLatch latch = new CountDownLatch(3);
-
-    // @Override
-    // public void run(String... args) throws Exception{
-        
-    //     this.template.send("myTopic", "foo2");
-    //     this.template.send("myTopic", "foo3");
-    //     latch.await(60, TimeUnit.SECONDS);
-    //     logger.info("All Received");
-    // }
-
-    @KafkaListener(topics = "myTopic")
-    public void listen(ConsumerRecord<?, ?> cr) throws Exception{
-        logger.info(cr.toString());
-        latch.countDown();
-    }
 }

@@ -14,4 +14,6 @@ public class TransactionModel {
     public Date transactionTime;
     public int productId;
     public String bodyMessage;
+
+    TransactionModel(){}
 }
