@@ -27,3 +27,5 @@ public class APIController {
          logger.info("All Received");
     }
 }
+
+/// kafka-console-consumer --bootstrap-server localhost:9092 --topic transactionTopic --from-beginning

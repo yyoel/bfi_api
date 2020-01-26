@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-//import java.util.logging.Logger;
 
 @SpringBootApplication
 public class MainApplication {
